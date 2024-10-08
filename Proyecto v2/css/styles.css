@@ -1,0 +1,358 @@
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1C1E21; /* Oscuro, acorde al fondo cósmico */
+    color: #FFF;
+    
+}
+/* Estilos generales para el fondo y el área de estrellas */
+.hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    position: relative;
+    z-index: 1;  /* Fondo tiene z-index más bajo */
+    overflow: hidden;
+}
+
+
+.hero-content {
+    text-align: center; /* Centrado del texto dentro del contenedor */
+    z-index: 5;  /* Asegura que el contenido esté visible por encima de las líneas */
+    position: relative; /* Mantiene el control sobre la posición */
+    color: white; /* Asegura que el texto sea visible sobre el fondo oscuro */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
+}
+
+/* Estilos de la Barra de Navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.001) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 10px 20px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+.navbar.scrolled {
+    background-color: #1C1E21; /* Fondo sólido al hacer scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #FFF;
+}
+
+.nav-link:hover {
+    color: #3498DB; /* Azul celeste */
+}
+
+/* Secciones */
+section {
+    padding: 60px 0;
+}
+
+.about-section {
+    background-color: rgba(28, 30, 33, 0.8); /* Fondo translúcido */
+}
+
+.projects-section .row {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que las columnas se envuelvan correctamente */
+    justify-content: space-around; /* Alinea las tarjetas uniformemente */
+  }
+
+  /* Tarjetas de proyectos*/
+ /* Contenedor de la tarjeta con perspectiva 3D */
+
+ /* CONTENIDO A EDITAR */
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Añade perspectiva para crear el efecto 3D */
+    margin: 20px;
+  }
+  
+  /* Contenedor interior que contiene el lado frontal y trasero */
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s; /* Duración de la animación de giro */
+  }
+  
+  /* Efecto de giro en hover */
+  .card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira 180 grados en el eje Y */
+  }
+  
+  /* Lado frontal de la tarjeta */
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta el lado posterior cuando no está girado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #1c1e21;
+    color: white;
+  }
+  
+  /* Lado trasero donde aparece el logo PHP */
+  .card-back {
+    transform: rotateY(180deg); /* Este lado está girado inicialmente */
+  }
+  
+  .logo-img {
+    width: 120px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-back:hover .logo-img {
+    opacity: 1;
+  }
+  
+ /* CONTENIDO A EDITAR */
+  
+  /* Botones */
+  .btn-primary {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980B9;
+  }
+  
+
+.contact-section {
+    background-color: rgba(106, 27, 154, 0.8); /* Morado translúcido */
+}
+
+footer {
+    background-color: #1C1E21; /* Oscuro */
+    color: #FFF;
+    padding: 20px 0;
+}
+
+/* Animaciones para la barra de navegación al hacer scroll */
+.navbar.scrolled {
+    background-color: #1C1E21 !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para "Mi Portafolio" con efecto de estrella */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white; /* Color blanco permanente */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: starTwinkle 2s infinite ease-in-out; /* Efecto de destello */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+/* Animación para simular el destello */
+@keyframes starTwinkle {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+}
+
+/* Estilos preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2.5s ease-in-out; /* Transición más suave */
+}
+
+/* Ocultar el preloader */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.5s ease-in-out;
+}
+
+/* Inicialmente ocultamos el contenido principal */
+#main-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.5s ease-in-out; /* Suavidad en la aparición del contenido */
+}
+
+/* Mostrar el contenido después de que el preloader desaparezca */
+#main-content.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2.5s ease-in-out; /* Suave transición */
+}
+/* Ajuste para reducir el tamaño del preloader */
+svg {
+    width: 5em; /* Cambia este valor para ajustar el tamaño */
+}
+
+/* Aro de luz */
+
+.loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) perspective(800px) rotateX(0deg) scaleX(1); /* Inicialmente un círculo 2D */
+        width: 950px;
+        height: 950px;
+        border: 4px solid #282828;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
+          10px 10px 10px rgba(0, 0, 0, 0.4),
+          inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+          inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+        z-index: -1;
+        transition: transform 0.5s ease; /* Transición suave */
+    }
+  
+  .loader:before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    background: #212121;
+    border-radius: 50%;
+    border: 2px solid #292929;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+      inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      -225deg,
+      #ff7402 0%,
+      #ffe700 50%,
+      #fff55e 100%
+    );
+    filter: blur(120px);
+    z-index: -1;
+    animation: animate 2.5s linear infinite, hue 3s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes hue {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+  
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  /* Animaciones */
+@keyframes animate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes hue {
+  0% {
+      filter: hue-rotate(0deg);
+  }
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 600px) {
+  /* Ajustar el tamaño del aro de luz */
+  .loader {
+      width: 80vw;
+      height: 80vw;
+  }
+
+  /* Ajustar tamaño del texto */
+  .hero-content h1 {
+      font-size: 1.5rem;
+  }
+
+  .hero-content p {
+      font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+      padding: 8px 16px;
+      font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Ajuste de la sección hero */
+  .loader {
+      width: 60vw;
+      height: 60vw;
+  }
+
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero-content p {
+      font-size: 1.25rem;
+  }
+}
