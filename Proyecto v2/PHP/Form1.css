@@ -1,0 +1,67 @@
+form {
+    text-align: center;
+    margin-top: fixed;
+    margin: 1.0em;
+    margin-left: -8em;
+    text-align: center;
+    background-color: rgb(144, 163, 199);
+    border-radius: 3em;
+
+}
+
+body{
+    background-image: url("imagenes/fondo.jpg");
+}
+
+.marcos{
+    background-color:rgba(214, 210, 210, 0.774) ;
+    border: 2px solid rgba(3, 113, 133, 0.541);
+    border-radius: 10px;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6.0em;
+    padding: 3em;
+    width: 8em;
+    padding-left: 12em;
+}
+
+h1 {
+    width: 175px;
+    height: 50px;
+    background-color: rgb(90, 151, 221);
+    border-radius: 5%;
+    position: center;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-left: -3.2em;  
+  }
+  
+  .text{
+    background: white; 
+    border: 2.5px double rgba(15, 79, 139, 0.541); 
+    border-radius: 10px; 
+    box-shadow: 0 0 5px rgba(27, 79, 223, 0.808); 
+    color: rgba(102, 102, 102, 0.815); 
+    outline: none;    
+}
+
+.entradas{
+    margin-top: -20%;
+}
+
+.bot{
+    margin-top: 0 fixed;
+    background-color: rgb(102, 100, 219);
+    border: 2.5px double rgba(15, 79, 139, 0.541); 
+    border-radius: 10px; 
+    box-shadow: 0 0 5px rgba(27, 79, 223, 0.808); 
+}
+
+.bot:hover {
+    background-color: rgb(130, 187, 236);
+}

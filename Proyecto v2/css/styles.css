@@ -58,11 +58,27 @@ body {
 
 .nav-link {
     font-weight: 500;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .nav-link:hover {
     color: #3498DB; /* Azul celeste */
+}
+/* Cambiar el botón de hamburguesa */
+.navbar-toggler {
+  border-color: white; /* Borde blanco para el botón */
+}
+
+.navbar-toggler-icon {
+  background-color: white; /* Fondo blanco para el botón de hamburguesa */
+}
+
+.navbar-collapse .nav-link {
+  color: black; /* Enlaces negros dentro del menú desplegable */
+}
+
+.navbar-collapse .nav-link:hover {
+  color: #ff5050; /* Personaliza el color cuando el enlace esté en hover */
 }
 
 /* Secciones */
@@ -74,70 +90,82 @@ section {
     background-color: rgba(28, 30, 33, 0.8); /* Fondo translúcido */
 }
 
-.projects-section .row {
+.projects-section .row{
     display: flex;
-    flex-wrap: wrap; /* Asegura que las columnas se envuelvan correctamente */
-    justify-content: space-around; /* Alinea las tarjetas uniformemente */
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Añade un espacio entre las tarjetas */
   }
 
   /* Tarjetas de proyectos*/
- /* Contenedor de la tarjeta con perspectiva 3D */
-
- /* CONTENIDO A EDITAR */
-.card {
-    width: 300px;
-    height: 400px;
-    perspective: 1000px; /* Añade perspectiva para crear el efecto 3D */
-    margin: 20px;
+  /* Estilos Generales para la tarjeta */
+  .col-md-6 {
+    flex: 1 1 30%; /* Haz que cada tarjeta ocupe aproximadamente un 30% del contenedor */
+    max-width: 300px; /* Controla el tamaño máximo para las tarjetas */
+    box-sizing: border-box;
   }
-  
-  /* Contenedor interior que contiene el lado frontal y trasero */
-  .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s; /* Duración de la animación de giro */
-  }
-  
-  /* Efecto de giro en hover */
-  .card:hover .card-inner {
-    transform: rotateY(180deg); /* Gira 180 grados en el eje Y */
-  }
-  
-  /* Lado frontal de la tarjeta */
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Oculta el lado posterior cuando no está girado */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    background-color: #1c1e21;
-    color: white;
-  }
-  
-  /* Lado trasero donde aparece el logo PHP */
-  .card-back {
-    transform: rotateY(180deg); /* Este lado está girado inicialmente */
-  }
-  
-  .logo-img {
-    width: 120px;
-    height: auto;
-    opacity: 0.8;
-    transition: opacity 0.5s ease;
-  }
-  
-  .card-back:hover .logo-img {
-    opacity: 1;
-  }
-  
- /* CONTENIDO A EDITAR */
-  
+  .book {
+  position: relative;
+  border-radius: 10px;
+  width: 240px;
+  height: 320px;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: all 0.5s ease;
+  margin: 20px auto;
+  margin-bottom: 20px; /* Espacio entre las filas de tarjetas */
+}
+.book img {
+  width: 60%; /* Ajusta el tamaño de la imagen a tu gusto */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Hace que la imagen mantenga su tamaño y aspecto dentro del contenedor */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Al hacer hover se produce la animación 3D */
+.book:hover {
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.book:hover .cover {
+  transform: rotateY(-80deg);
+  transition: transform 0.7s ease-in-out;
+}
+/* Estilos para la portada (front face) */
+.cover {
+  position: absolute;
+  top: 0;
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform-origin: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+.cover img {
+  width: 60%; /* Ajusta el tamaño de la imagen a tu gusto */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Hace que la imagen mantenga su tamaño y aspecto dentro del contenedor */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Tipografía del contenido */
+p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
   /* Botones */
   .btn-primary {
     background-color: #3498DB;
@@ -172,7 +200,7 @@ footer {
 /* Estilos para "Mi Portafolio" con efecto de estrella */
 .navbar-brand {
     font-size: 1.5rem;
-    color: white; /* Color blanco permanente */
+    color: rgb(248, 243, 243) !important; /* Color blanco permanente */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
     animation: starTwinkle 2s infinite ease-in-out; /* Efecto de destello */
     transition: color 0.3s ease; /* Transición suave del color */
@@ -189,10 +217,9 @@ footer {
 }
 
 /* Estilos preloader */
+
 #preloader {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: #000;
@@ -322,23 +349,35 @@ svg {
 @media (max-width: 600px) {
   /* Ajustar el tamaño del aro de luz */
   .loader {
-      width: 80vw;
-      height: 80vw;
+      width: 92vw;
+      height: 92vw;
   }
-
+  .loader span {
+    filter: blur(20px)
+    }
   /* Ajustar tamaño del texto */
   .hero-content h1 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
   }
 
   .hero-content p {
-      font-size: 1rem;
+      font-size: 0.6rem;
   }
 
   .hero-buttons .btn {
       padding: 8px 16px;
-      font-size: 0.875rem;
+      font-size: 0.7rem;
   }
+
+  .book {
+    width: 180px;
+    height: 250px;
+  }
+
+p {
+    font-size: 16px;
+}
+
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -355,4 +394,15 @@ svg {
   .hero-content p {
       font-size: 1.25rem;
   }
+
+/* Pantallas grandes: ordenadores */
+@media (min-width: 1025px) {
+  .loader {
+      width: 60vw;  /* Tamaño del aro para pantallas grandes */
+      height: 60vw;
+  }
+  .hero-section {
+      height: 100vh;  /* Altura completa en pantallas grandes */
+  }
+}
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<title>Prueba</title>
+        <link rel="stylesheet" href="form1.css">    
+    </head>
+    <body>
+        <div class="cuerpo">
+            <h1>Colores</h1><br>
+            <form action="formulario.php" method="post">
+                <fieldset>
+                    <legend style="text-align: center;">Colores</legend>
+                <div class="inputs">
+                    <input class="texto" type="radio" value="green" name="color" id="verde"> <label for="verde">Verde</label>
+                </div>
+                <div class="inputs">
+                    <input class="texto" type="radio" value="red" name="color" id="rojo"> <label for="rojo">Rojo</label>
+                </div>
+                <div class="inputs">
+                    <input class="texto" type="radio" value="yellow" name="color" id="amarillo"> <label for="amarillo">Amarillo</label>
+                </div>
+                <div class="inputs">
+                    <input class="texto" type="radio" value="blue" name="color" id="azul"> <label for="azul">Azul</label>
+                </div>
+                <input class="boton" type="submit" value="Enviar">
+                <input class="boton" type="reset" value="Reset">
+            </fieldset>
+            </form>
+            <br>
+            <fieldset>
+            <legend style="text-align: center;">Color-Picker</legend>
+            <form action="formulario.php" method="post">
+                <input type="color" name="color"><br>
+                <input class="boton" type="submit" value="Enviar">
+                <input class="boton" type="reset" value="Reset">
+            </fieldset>
+            </div>
+            </form>
+            <div class="botones">
+                <a href="../bloque1.html"><button class="bot">volver</button></a>
+        </div>
+    </body>
+</html>
