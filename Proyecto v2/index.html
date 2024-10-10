@@ -35,6 +35,13 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <input id="checkbox" type="checkbox" />
+                    <label class="switch" for="checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"></path>
+                        </svg>
+                    </label>
+
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
@@ -58,12 +65,15 @@
                 <!-- Aro de luz -->
                 <div class="loader">
                     <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </section>
             <!-- Sección Proyectos -->
             <section id="proyectos" class="projects-section">
                 <div class="container text-center">
-                    <h2>Proyectos Destacados</h2>
+                    <h2>Experiencia</h2>
                     </br>
                     <div class="row">
                         <!-- Fila 1 -->
@@ -71,15 +81,7 @@
                             <div class="book">
                                 <img src="images/Designer.svg" alt="SGY" class="logo-img">
                                 <div class="cover">
-                                    <img src="images/api-app-coding-2-svgrepo-com.svg" alt="API" class="logo-img">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-4">
-                            <div class="book">
-                                <img src="images/Designer.svg" alt="SGY" class="logo-img">
-                                <div class="cover">
-                                    <img src="images/cisco-svgrepo-com.svg" alt="CISCO" class="logo-img">
+                                    <img src="images/REDES.svg" alt="REDES" class="logo-img">
                                 </div>
                             </div>
                         </div>
@@ -102,7 +104,7 @@
                         <!-- Fila 2 -->
                         <div class="col-md-6 col-md-4">
                             <div class="book">
-                                <img src="images/Designer.svg" alt="SGY" class="logo-img">
+                                <p>Estás en él <br> ahora mismo</p>
                                 <div class="cover">
                                     <img src="images/css-svgrepo-com.svg" alt="CSS" class="logo-img">
                                 </div>
@@ -118,17 +120,9 @@
                         </div>
                         <div class="col-md-6 col-md-4">
                             <div class="book">
-                                <img src="images/Designer.svg" alt="SGY" class="logo-img">
+                                <p>Estás en él <br> ahora mismo</p>
                                 <div class="cover">
                                     <img src="images/html-16-svgrepo-com.svg" alt="HTML" class="logo-img">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-4">
-                            <div class="book">
-                                <img src="images/Designer.svg" alt="SGY" class="logo-img">
-                                <div class="cover">
-                                    <img src="images/xml-document-svgrepo-com.svg" alt="XML" class="logo-img">
                                 </div>
                             </div>
                         </div>
@@ -154,32 +148,92 @@
                             <div class="book">
                                 <img src="images/Designer.svg" alt="SGY" class="logo-img">
                                 <div class="cover">
-                                    <img src="images/xampp_logo_icon_249151.svg" alt="XAMPP" class="logo-img">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-4">
-                            <div class="book">
-                                <img src="images/Designer.svg" alt="SGY" class="logo-img">
-                                <div class="cover">
                                     <img src="images/linux-svgrepo-com.svg" alt="LINUX" class="logo-img">
                                 </div>
                             </div>
                         </div>
+                        <!-- OTROS PROYECTOS 
+                        <div class="col-md-6 col-md-4">
+                            <div class="main">
+                                <div class="card" id="c1"></div>
+                                <div class="card" id="c2"></div>
+                                <div class="card" id="c3"></div>
+                                <div class="card" id="c4"></div>
+                            </div>
+                        </div>
+                        -->
                     </div>
-                </div>
-                </br>
-                <div class= "text-center">
-                    <a href="#proyectos" class="btn btn-light">Ver más detalles</a>
                 </div>
             </section>
             <!-- Sección Sobre mí -->
             <section id="sobre-mi" class="about-section">
-                <div class="container text-center">
+                <div class="container">
                     <h2>Sobre Mí</h2>
-                    <p>Soy un desarrollador web con experiencia en crear soluciones digitales modernas, funcionales y visualmente atractivas.</p>
+                    </br>
+                    </br>
+                    <div class="input__container">
+                        <div class="shadow__input"></div>
+                        <button class="input__button__shadow">
+                            <img src="images/imagen.svg" alt="Icono">
+                        </button>
+                        <input type="text" name="username" class="input__search" placeholder="I’m usually called Robin"/>
+                    </div>
                 </div>
-            </section>
+                <div class="cont">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user">Robin@portfolio: ~</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">robin@portfolio:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">sudo nano ASIR/Portfolio/About-me</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            <article id="nano-editor" class="nano-editor">
+                <div class="nano-header">
+                    <span class="nano-title">Robin@porfolio: ASIR/Porfolio/About-me</span>
+                </div>
+                <div class="nano-body">
+                    <div class="nano-status-bar">
+                        <span>GNU nano 4.3</span>
+                        <span>file</span>
+                        <span>Modified</span>
+                    </div>
+                    <div class="nano-content">
+                        <p>Soy un administrador de sistemas con experiencia en muchos ámbitos de la informática. Poseo conocimientos en sistemas operativos, scripting, redes, base de datos y seguridad.</p>
+                        <p>Tengo como punto fuerte el tener ganas de aprender, ser perseverante con mis objetivos y tener buen carisma. Puedo asimilar cosas nuevas sin mucho esfuerzo y me adapto realmente fácil ante cualquier situación.</p>
+                        <p>Por otro lado, me manejo bien en equipo y me adapto fácil al entorno e incluso aportando nuevas ideas.</p>
+                        <p>Mi trabajo, obviando la tarea de cumplir el objetivo principal, destaca por tomarme el tiempo de analizar mis objetivos muy bien, esto ocasiona que pueda tener mejor dominio del tema y cree un entorno seguro, ordenado y fácil de entender.</p>
+                        <p>Como otro dato de interés personal, últimamente he descubierto que me gusta diseñar webs ya que puedo utilizar parte de mi imaginación y proyectarla en una página, aunque también estoy interesado en aprender muchos otros lenguajes aunque sean de otros entornos.</p>
+                    </div>
+                    <div class="nano-toolbar">
+                        <span>^G Get Help</span>
+                        <span>^O Write Out</span>
+                        <span>^W Where Is</span>
+                        <span>^R Read File</span>
+                        <span>^Y Prev Page</span>
+                        <span>^K Cut Text</span>
+                        <span>^C Cur Pos</span>
+                        <br>
+                        <span>^X Exit</span>
+                        <span>^J Justify</span>
+                        <span>^T To Spell</span>
+                        <span>^V Next Page</span>
+                        <span>^U Paste Text</span>
+                        <span>^_ Go To Line</span>
+                    </div>
+                </div>
+            </article>
+        </section>
             <!-- Sección Contacto -->
             <section id="contacto" class="contact-section">
                 <div class="container text-center">

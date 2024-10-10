@@ -96,7 +96,7 @@ document.addEventListener("scroll", function() {
     let scaleXValue = 1 - (scrollPosition / maxScroll); // Escalado horizontal
 
     // Limitar el valor de escala entre 1 y 0.1
-    if (scaleXValue < 0.1) scaleXValue = 0.1;
+    if (scaleXValue < 0.1) scaleXValue = 0.2;
 
     // Aplicar la transformación
     loader.style.transform = `translate(-50%, -50%) perspective(800px) rotateX(${rotateXValue}deg) scaleX(${scaleXValue})`;
