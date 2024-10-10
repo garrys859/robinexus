@@ -7,7 +7,7 @@ body {
     color: #FFF;
     
 }
-/* Estilos generales para el fondo y el área de estrellas */
+/* Estilos generales para el fondo */
 .hero-section {
     height: 100vh;
     background-size: cover;
@@ -29,15 +29,17 @@ body {
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .hero-buttons .btn {
+    padding: 8px 16px; /* Hacemos los botones un poco más pequeños */
+    font-size: 0.9rem; /* Ajustamos el tamaño del texto en los botones */
     margin: 10px;
 }
 
@@ -273,46 +275,58 @@ svg {
     width: 5em; /* Cambia este valor para ajustar el tamaño */
 }
 
-/* Aro de luz */
+/* Aro de luz con fondo blanco similar al proyecto v3
 
 .loader {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) perspective(800px) rotateX(0deg) scaleX(1); /* Inicialmente un círculo 2D */
-  border-radius: 50%;
-  height: 950px;
-  width: 950px;
+ /* border-radius: 50%;
+  height: 35vw;
+  width: 35vw;
   box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
           10px 10px 10px rgba(0, 0, 0, 0.4),
           inset -5px -5px 5px rgba(255, 255, 255, 0.2),
           inset 10px 10px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.5s ease; /* Transición suave */
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+ /* background-color: #ffffff;
+  background-image: linear-gradient(#ebe9ec, #e5e7e9, #e5e7e7);
 }
 
 .loader span {
-    top: 50%;
+  top: 50%;
   left: 50%;
   position: absolute;
   border-radius: 50%;
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
-  animation: rotate_3922 1.8s linear infinite;
+  background-color: #fff;
+  background-image: linear-gradient(#ffffff, #d3d0d3, #eee8e8);
+  animation: rotate_3922 6s linear infinite;
 }
+
 .loader span:nth-of-type(1) {
   filter: blur(5px);
 }
 
 .loader span:nth-of-type(2) {
   filter: blur(10px);
+
+}
+.loader span:nth-of-type(3) {
+  filter: blur(20px);
 }
 
 .loader span:nth-of-type(4) {
+  filter: blur(40px);
+}
+.loader span:nth-of-type(5) {
+  filter: blur(60px);
+}
+
+.loader span:nth-of-type(6) {
   filter: blur(50px);
 }
 
@@ -324,11 +338,11 @@ svg {
     right: 25px;
     bottom: 25px;
     z-index: 10;
-    background: #212121;
+    background: #000000;
     border-radius: 50%;
     border: 2px solid #292929;
-    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
-      inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -2px -2px 5px rgba(245, 244, 244, 0.2),
+      inset 3px 3px 5px rgba(235, 234, 234, 0.5);
   }
 
 @keyframes rotate_3922 {
@@ -340,7 +354,7 @@ svg {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
+*/
 /* Ajustes Responsivos */
 @media (max-width: 600px) {
   /* Ajustar el tamaño del aro de luz */
@@ -860,3 +874,6 @@ p {
   margin-right: 10px;
   margin-bottom: 5px;
 }
+
+
+
